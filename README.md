@@ -4,15 +4,15 @@ PCB for connecting a programmer (J-Link or ST-Link) to an microcontroller via Ju
 It's also possible to monitor the target supply by LED or supply the target (with voltage regulator) or both, when a 3 way jumper is used.
 Because of this, Vtarget is called VCC.
 
+## Schematic
+![schematic](https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/b88aa755-922c-4654-b4fa-f532b7dfed01)
+
 ## Components
 Not all components are needed.
 Some footprints can be used in multiple ways.
 Some options cancel out each other.
 
 Plan and solder what you need for your case.
-
-## Schematic
-![schematic](https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/b88aa755-922c-4654-b4fa-f532b7dfed01)
 
 ### Connectors
 - 20 pin header
@@ -22,7 +22,7 @@ Plan and solder what you need for your case.
     - PCB dimensions are designed for this usage with ST-Link/V2 and J-Link Base
     - I've found them as [2.54 mm pitch 20 pin female header with polarizing key, wide type on AliExpress](https://www.aliexpress.com/item/32956131069.html?spm=a2g0o.order_list.order_list_main.14.36e81802jonIUv)
   - Pinout is mostly [JTAG Interface Connection](https://www.segger.com/products/debug-probes/j-link/technology/interface-description/) with changes for ST-Link:
-    - Pin 1+2: Bridged together (Some ST-Link need both wired together for cable detection or something while pin 2 is unused on J-Link, so connecting them seems fine
+    - Pin 1+2: Bridged together (some ST-Link need both wired together for cable detection or something while pin 2 is unused on J-Link, so connecting them seems fine)
     - Pin 4: UART RX (ST-Link)
     - Pin 6: UART TX (ST-Link)
     - Pin 8: Boot0 (ST-Link)
@@ -39,7 +39,7 @@ Plan and solder what you need for your case.
   - 2.54 mm pitch version for other targets, Tag connect or other adapters
   - Both connectors share the same pinout
     - It's designed to be compatible with [the PCB-side connector of the 10-Pin Needle Adapter](https://www.segger.com/products/debug-probes/j-link/accessories/adapters/10-pin-needle-adapter/) and ARM 10 pin JTAG/SWD
-    - Pin 5, 7 and 9 are [configurable via solder jumpers](https://github.com/Pixtxa/J-ST-Link-PCB/new/main?readme=1#jumpers)
+    - Pin 5, 7 and 9 are [configurable via solder jumpers](https://github.com/Pixtxa/J-ST-Link-PCB#jumpers)
 - Three pin headers on top
   - Can be used for connecting jumper cables
   - Can be used to solder wires directly on
@@ -78,15 +78,15 @@ Plan and solder what you need for your case.
 * = default
 
 ### LED + Resistor
-* Only lights up if J1 is selected to monitor VCC and there is voltage on VCC
-* Both 0603
-* LED color doesn't really matter, chose what you like, but make sure it works with your target voltage (usualy red works with lowest voltage)
-* Resistor value depends on LED and target voltage, but 330...1000 Ω should be fine for most LEDs
+- Only lights up if J1 is selected to monitor VCC and there is voltage on VCC
+- Both 0603
+- LED color doesn't really matter, chose what you like, but make sure it works with your target voltage (usualy red works with lowest voltage)
+- Resistor value depends on LED and target voltage, but 330...1000 Ω should be fine for most LEDs
 
 ### Voltage regulator + capacitors
-* Designed for 3.3 V via TLV70433 with 100n 0603 capacitors
-* Other voltage regulators might be compatible with this footprint
-* If unused, J3 can be set
+- Designed for 3.3 V via TLV70433 with 100n 0603 capacitors
+- Other voltage regulators might be compatible with this footprint
+- If unused, J3 can be set
 
 ## Tested
 - Programmers
@@ -102,5 +102,5 @@ Plan and solder what you need for your case.
   - 10 pin 2.54 mm (SWD)
 
 ## Attribution
-Adafruit microbuilder and built in EAGLE libs are used together with own changes/modifications
-[EAGLE.gitignore by github](https://github.com/github/gitignore/blob/main/Eagle.gitignore)
+- Adafruit microbuilder and built in EAGLE libs are used together with own changes/modifications
+- [EAGLE.gitignore by github](https://github.com/github/gitignore/blob/main/Eagle.gitignore)
