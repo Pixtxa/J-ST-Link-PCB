@@ -100,3 +100,7 @@ Plan and solder what you need for your case.
   - STM32 (SWD)
   - 10 pin 1.27 mm (SWD)
   - 10 pin 2.54 mm (SWD)
+
+## Attribution
+Adafruit microbuilder and built in EAGLE libs are used together with own changes/modifications
+[EAGLE.gitignore by github](https://github.com/github/gitignore/blob/main/Eagle.gitignore)
