@@ -1,8 +1,11 @@
 # J-ST-Link-PCB
-
-PCB for connecting a programmer (J-Link or ST-Link) to an microcontroller via Jumper cables or 10 pin header.
-It's also possible to monitor the target supply by LED or supply the target (with voltage regulator) or both, when a 3 way jumper is used.
+PCB for connecting a programmer (J-Link or ST-Link) to a microcontroller via jumper cables or 10 pin header.
+It's also possible to monitor the target supply by LED or supply the target (with voltage regulator) or do both, when a 3 way jumper is used.
 Because of this, Vtarget is called VCC.
+
+<img alt="Examples" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/eae6e271-3d8a-4df5-b801-3988281898b5"><br>
+<img alt="PCB" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/d3eeaf96-308a-4271-a3b4-7d3dc4635faa" height="597">
+<img alt="PCBA" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/229ae1a3-f431-43bf-af28-4b26e38961ff" height="597">
 
 ## Schematic
 ![schematic](https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/b88aa755-922c-4654-b4fa-f532b7dfed01)
@@ -13,6 +16,21 @@ Some footprints can be used in multiple ways.
 Some options cancel out each other.
 
 Plan and solder what you need for your case.
+
+### Examples
+<img alt="J-Link Base" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/5e0389d7-2022-43de-9984-59e3d23e6eef" height="200">
+<img alt="ST-Link/V2" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/01001059-b0d9-4c38-b211-bef0b8ebcef8" height="200">
+<img alt="Nucleo ST-Link" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/8fb23edb-ff8e-457e-b7c2-efd8dc11777d" height="200">
+<img alt="Cable" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/ab8ff5b4-c3b7-494f-8609-d05ad0760c23" height="200">
+
+When using a keyed 20-pin female header, it fits nicely on J-Link base and ST-Link/V2.
+A 6-pin female header can be soldered on the side to also support the nucleo ST-Link boards and it will still nicely fit on the J-Link Base, but not so nice on the ST-Link/V2.
+Instead of the 20-pin female header, a male connector can be used. In this case (or if completely unused) it's possible to solder the Nucleo connector straight down.
+It's only needed to solter the parts for the needed paths.
+If the 3.3V regulator is unused (ST-Link provides 3.3 V; some targets are compatible with 5 V from J-Link), there is a solder jumper where the regulator would sit to bypass the pad.
+Some other connecors are also avialable as female version; there are also angled connectors that might be better for some applications.
+The pinout of the 10 pin connectors can be modified by some solder jumpers.
+When ordering PCBs you mostly will get some more for a cheap price, so I reccomend to assemble different versions for different applications and maybe use different colored parts.
 
 ### Connectors
 - 20 pin header
@@ -57,9 +75,9 @@ Plan and solder what you need for your case.
 ### Jumpers
 - J1
   - NC*: Don't monitor/supply VCC - VCC is only connected to the programmer
-  - LEFT+MIDDLE: Monitor VCC - VCC is connected to the programmer and an LED
-  - MIDDLE+RIGHT: Supply VCC - VCC is connected to the programmer and the supply voltage
-  - LEFT+MIDDLE+RIGHT: Monitor and supply VCC - VCC is connected to the programmer, an LED and the supply voltage
+  - LEFT+MIDDLE: Monitor VCC - VCC is connected to the programmer and an LED (if LED + resistor is assembled)
+  - MIDDLE+RIGHT: Supply VCC - VCC is connected to the programmer and the supply voltage (if voltage regulator is assembled or J3 is set)
+  - LEFT+MIDDLE+RIGHT: Monitor and supply VCC - combination of the last two options above
 - J3
   - NC*: Use voltage regulator for supply voltage
   - SET: Skip voltage regulator, wire Pin 19 (5 V on J-Link; 3.3 V on ST-Link) directly to J1
@@ -85,8 +103,11 @@ Plan and solder what you need for your case.
 
 ### Voltage regulator + capacitors
 - Designed for 3.3 V via TLV70433 with 100n 0603 capacitors
-- Other voltage regulators might be compatible with this footprint
-- If unused, J3 can be set
+- Only needed for powering 3.3 V targets on J-Link, which outputs 5 V
+  - ST-Link already outputs 3.3 V and doesn't need it
+  - Because of TLV70433 has a low voltage drop, it's possible for most 3.3 V targets to assemble the regulator and use this PCB on J-Link and ST-Link 
+- Other voltage regulators (second source or for other voltage levels) might be compatible with this footprint
+- If unused, J3 (located whrere the regulator would sit) can be set to bypass the regulator pad
 
 ## Tested
 - Programmers
