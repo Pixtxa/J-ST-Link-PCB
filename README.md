@@ -4,8 +4,8 @@ It's also possible to monitor the target supply by LED or supply the target (wit
 Because of this, Vtarget is called VCC.
 
 <img alt="Examples" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/eae6e271-3d8a-4df5-b801-3988281898b5"><br>
-<img alt="PCB" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/d3eeaf96-308a-4271-a3b4-7d3dc4635faa" height="550">
-<img alt="PCBA" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/229ae1a3-f431-43bf-af28-4b26e38961ff" height="550">
+<img alt="PCB" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/d3eeaf96-308a-4271-a3b4-7d3dc4635faa" width="40%">
+<img alt="PCBA" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/229ae1a3-f431-43bf-af28-4b26e38961ff" width="58%">
 
 ## Schematic
 ![schematic](https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/b88aa755-922c-4654-b4fa-f532b7dfed01)
@@ -18,10 +18,10 @@ Some options cancel out each other.
 Plan and solder what you need for your case.
 
 ### Examples
-<img alt="J-Link Base" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/5e0389d7-2022-43de-9984-59e3d23e6eef" height="200">
-<img alt="ST-Link/V2" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/01001059-b0d9-4c38-b211-bef0b8ebcef8" height="200">
-<img alt="Nucleo ST-Link" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/8fb23edb-ff8e-457e-b7c2-efd8dc11777d" height="200">
-<img alt="Cable" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/ab8ff5b4-c3b7-494f-8609-d05ad0760c23" height="200">
+<img alt="J-Link Base" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/5e0389d7-2022-43de-9984-59e3d23e6eef" width="31%">
+<img alt="ST-Link/V2" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/01001059-b0d9-4c38-b211-bef0b8ebcef8" width="18%">
+<img alt="Nucleo ST-Link" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/8fb23edb-ff8e-457e-b7c2-efd8dc11777d" width="29%">
+<img alt="Cable" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/ab8ff5b4-c3b7-494f-8609-d05ad0760c23" width="20%">
 
 When using a keyed 20-pin female header, it fits nicely on J-Link base and ST-Link/V2.
 A 6-pin female header can be soldered on the side to also support the nucleo ST-Link boards and it will still nicely fit on the J-Link Base, but not so nice on the ST-Link/V2.
