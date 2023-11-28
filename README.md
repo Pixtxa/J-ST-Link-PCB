@@ -4,8 +4,8 @@ It's also possible to monitor the target supply by LED or supply the target (wit
 Because of this, Vtarget is called VCC.
 
 <img alt="Examples" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/eae6e271-3d8a-4df5-b801-3988281898b5"><br>
-<img alt="PCB" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/d3eeaf96-308a-4271-a3b4-7d3dc4635faa" height="570">
-<img alt="PCBA" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/229ae1a3-f431-43bf-af28-4b26e38961ff" height="570">
+<img alt="PCB" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/d3eeaf96-308a-4271-a3b4-7d3dc4635faa" height="550">
+<img alt="PCBA" src="https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/229ae1a3-f431-43bf-af28-4b26e38961ff" height="550">
 
 ## Schematic
 ![schematic](https://github.com/Pixtxa/J-ST-Link-PCB/assets/30337073/b88aa755-922c-4654-b4fa-f532b7dfed01)
