@@ -1,5 +1,5 @@
 # J-ST-Link-PCB
-Adapter PCB for connecting a programmer (J-Link or ST-Link) to a microcontroller via jumper cables or 10 pin header.
+Adapter PCB for connecting a programmer (SEGGER J-Link or STMicroelectronics ST-Link) to a microcontroller via jumper cables or 10 pin header.
 It's also possible to monitor the target supply by LED or supply the target (with voltage regulator) or do both, when a 3 way jumper is used.
 Because of this, Vtarget is called VCC.
 
